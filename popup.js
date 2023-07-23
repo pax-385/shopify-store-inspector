@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Wait 1s to artificially extend the loading time
             setTimeout(function () {
                 // Hide the loading spinner
-                document.getElementById('loader').style.display = 'none'; 
+                document.getElementById('loader').style.display = 'none';
 
                 // If there was an error fetching the JSON data (i.e., the website doesn't run on Shopify)
                 if (response.error !== undefined) {
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         // Use the user-friendly name from the mapping if it exists, otherwise use the original key
                         let displayName = fieldNameMapping[key] ? fieldNameMapping[key] : key;
                         // If the value is an array, join all its elements into a string, otherwise just use the original value
-                        let displayValue = Array.isArray([key]) ? [key].join(', ') : [key];
-                        // Set the text content of the paragraph to the display name and value
-                        p.textContent = displayName + ': ' + displayValue;
+                        let displayValue = Array.isArray(value) ? value.join(', ') : value;
+                        // Set the HTML content of the paragraph to the display name and value
+                        p.innerHTML = '<strong>' + displayName + '</strong>' + ': ' + displayValue;
                         // Append the paragraph to the 'data' element
                         document.getElementById('data').appendChild(p);
                     }
