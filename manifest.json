@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Shopify Store Inspector",
+    "version": "1.0",
+    "permissions": ["storage", "scripting", "activeTab", "webRequest"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Shopify Store Inspector"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+    }],
+    "web_accessible_resources": [
+        {
+            "resources": ["fetchScript.js"],
+            "matches": ["<all_urls>"],
+            "use_dynamic_url": false
+        }
+    ]
+}
