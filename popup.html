@@ -9,17 +9,41 @@
         color: #212B36; /* Shopify's dark grey color for text */
         background-color: #F4F6F8; /* Shopify's light grey color for background */
         width: 350px; /* Fixed width for popup */
-        padding: 20px;
+        padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         box-sizing: border-box;
-        height: 400px;
+        height: auto;
+        overflow: auto;
     }
+
+    /* Customize scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
     
     h2 {
         color: #06847B; /* Shopify's green color for headings */
+    }
+    
+    #data {
+        width: 100%;
+        overflow-y: scroll;
     }
     
     #loader {
@@ -43,20 +67,6 @@
         }
     }
     
-    .json-key {
-        font-weight: bold;
-        color: #212B36; /* Darker text for keys */
-    }
-    
-    .json-value {
-        color: #3E4E56; /* Lighter text for values */
-    }
-    
-    .json-pair {
-        margin-bottom: 10px;
-        text-align: left; /* Align text to the left */
-        width: 100%; /* Take full width of parent */
-    }
     </style>
     
 </head>
