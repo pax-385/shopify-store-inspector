@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Shopify Store Inspector",
     "version": "1.0",
-    "permissions": ["storage", "scripting", "activeTab", "webRequest"],
+    "permissions": ["activeTab"],
     "icons": { "16": "images/icon16.png",
            "48": "images/icon48.png",
           "128": "images/icon128.png" },
